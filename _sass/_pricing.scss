@@ -1,0 +1,106 @@
+// Pricing
+
+.pricing {
+  padding: $space-20 0;
+  background-color: $dark-teal-light;
+}
+
+.pricing__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-6;
+  max-width: 1000px;
+  margin: 0 auto;
+  
+  @include respond-to(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pricing-card {
+  position: relative;
+  @include card;
+  text-align: center;
+  
+  &--featured {
+    border: 2px solid $lime;
+    transform: scale(1.05);
+    
+    @include respond-to(md) {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.pricing-card__badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: $space-1 $space-4;
+  background-color: $lime;
+  color: $dark-teal;
+  font-weight: $font-bold;
+  font-size: $text-xs;
+  border-radius: $rounded-full;
+}
+
+.pricing-card__name {
+  font-size: $text-xl;
+  font-weight: $font-bold;
+  margin-bottom: $space-4;
+  color: $white;
+}
+
+.pricing-card__price {
+  margin-bottom: $space-6;
+}
+
+.pricing-card__amount {
+  font-size: $text-4xl;
+  font-weight: $font-extrabold;
+  color: $white;
+}
+
+.pricing-card__period {
+  font-size: $text-base;
+  color: rgba($white, 0.6);
+}
+
+.pricing-card__features {
+  list-style: none;
+  margin-bottom: $space-8;
+  
+  li {
+    padding: $space-2 0;
+    color: rgba($white, 0.8);
+    border-bottom: 1px solid rgba($white, 0.1);
+    
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.pricing-card__button {
+  @include button-base;
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid rgba($white, 0.3);
+  color: $white;
+  
+  &:hover {
+    background-color: rgba($white, 0.1);
+    border-color: $white;
+  }
+  
+  &--primary {
+    background-color: $berry-red;
+    border-color: $berry-red;
+    
+    &:hover {
+      background-color: darken($berry-red, 10%);
+      border-color: darken($berry-red, 10%);
+    }
+  }
+}

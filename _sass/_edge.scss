@@ -1,0 +1,78 @@
+// Edge Feature
+
+.edge-feature {
+  padding: $space-20 0;
+  background-color: $dark-teal;
+  text-align: center;
+}
+
+.edge-feature__label {
+  display: inline-block;
+  padding: $space-2 $space-4;
+  background-color: $lime;
+  color: $dark-teal;
+  font-weight: $font-bold;
+  font-size: $text-sm;
+  border-radius: $rounded-full;
+  margin-bottom: $space-6;
+}
+
+.edge-feature__title {
+  font-size: $text-3xl;
+  font-weight: $font-extrabold;
+  margin-bottom: $space-12;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  @include respond-to(md) {
+    font-size: $text-4xl;
+  }
+}
+
+.edge-feature__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-6;
+  margin-bottom: $space-12;
+  
+  @include respond-to(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include respond-to(lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.edge-feature__item {
+  @include card;
+}
+
+.edge-feature__icon {
+  font-size: $text-3xl;
+  margin-bottom: $space-4;
+}
+
+.edge-feature__item-title {
+  font-size: $text-lg;
+  font-weight: $font-bold;
+  margin-bottom: $space-2;
+  color: $white;
+}
+
+.edge-feature__item-text {
+  font-size: $text-sm;
+  color: rgba($white, 0.7);
+}
+
+.edge-feature__result {
+  display: inline-block;
+  padding: $space-4 $space-8;
+  background: rgba($berry-red, 0.1);
+  border: 2px solid $berry-red;
+  border-radius: $rounded-xl;
+  font-size: $text-xl;
+  font-weight: $font-bold;
+  color: $white;
+}

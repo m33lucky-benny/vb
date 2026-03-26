@@ -1,0 +1,20 @@
+title: "ViralBerry"
+description: "Know what to create. Create it fast. Make it yours."
+baseurl: ""
+url: "https://viralberry.ai"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/

@@ -1,0 +1,62 @@
+// Header
+
+.site-header {
+  position: sticky;
+  top: 0;
+  background-color: rgba($dark-teal, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba($white, 0.1);
+  z-index: 100;
+  
+  .container {
+    @include flex-between;
+    height: 4rem;
+  }
+}
+
+// Navbar brand
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: $text-xl;
+  font-weight: $font-bold;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.brand-kieron {
+  color: $berry-red;
+}
+
+.brand-play {
+  color: $white;
+}
+
+.brand-emoji {
+  margin-left: $space-1;
+  font-size: $text-lg;
+}
+
+// Navigation
+.nav {
+  display: none;
+  align-items: center;
+  gap: $space-8;
+  
+  @include respond-to(md) {
+    display: flex;
+  }
+}
+
+.nav__link {
+  font-weight: $font-medium;
+  color: rgba($white, 0.8);
+  transition: color $transition-fast;
+  
+  &:hover {
+    color: $lime;
+  }
+}

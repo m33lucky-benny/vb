@@ -1,0 +1,48 @@
+// Solution Steps
+
+.solution-steps {
+  padding: $space-20 0;
+  background-color: $dark-teal-light;
+}
+
+.solution-steps__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-8;
+  
+  @include respond-to(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include respond-to(lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.solution-step {
+  position: relative;
+  padding: $space-6;
+  background: rgba($white, 0.05);
+  border-radius: $rounded-xl;
+  border: 1px solid rgba($white, 0.1);
+}
+
+.solution-step__number {
+  display: inline-block;
+  font-size: $text-3xl;
+  font-weight: $font-extrabold;
+  color: $berry-red;
+  margin-bottom: $space-4;
+}
+
+.solution-step__title {
+  font-size: $text-xl;
+  font-weight: $font-bold;
+  margin-bottom: $space-3;
+  color: $white;
+}
+
+.solution-step__text {
+  color: rgba($white, 0.7);
+  line-height: 1.6;
+}

@@ -1,0 +1,31 @@
+// Responsive
+
+@include respond-to(sm) {
+  .container {
+    padding-left: $space-6;
+    padding-right: $space-6;
+  }
+}
+
+@include respond-to(md) {
+  .container {
+    padding-left: $space-8;
+    padding-right: $space-8;
+  }
+}
+
+// Mobile-specific adjustments
+@media (max-width: 767px) {
+  .pricing-card--featured {
+    transform: none;
+    order: -1;
+  }
+  
+  .edge-feature__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .solution-steps__grid {
+    grid-template-columns: 1fr;
+  }
+}

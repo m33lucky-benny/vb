@@ -1,0 +1,98 @@
+// Hero
+
+.hero {
+  padding: $space-16 0;
+  background: linear-gradient(180deg, $dark-teal 0%, $dark-teal-light 100%);
+  text-align: center;
+  
+  @include respond-to(md) {
+    padding: $space-24 0;
+  }
+  
+  .container {
+    max-width: 900px;
+  }
+}
+
+.hero__title {
+  font-size: $text-3xl;
+  font-weight: $font-extrabold;
+  line-height: 1.1;
+  margin-bottom: $space-6;
+  
+  @include respond-to(md) {
+    font-size: $text-5xl;
+  }
+}
+
+.hero__subtitle {
+  font-size: $text-lg;
+  color: rgba($white, 0.8);
+  margin-bottom: $space-8;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  @include respond-to(md) {
+    font-size: $text-xl;
+  }
+}
+
+// Waitlist form
+.waitlist-form {
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+  max-width: 500px;
+  margin: 0 auto $space-4;
+  
+  @include respond-to(sm) {
+    flex-direction: row;
+  }
+}
+
+.waitlist-form__input {
+  flex: 1;
+  padding: $space-4 $space-5;
+  font-size: $text-base;
+  background: rgba($white, 0.1);
+  border: 1px solid rgba($white, 0.2);
+  border-radius: $rounded-lg;
+  color: $white;
+  
+  &::placeholder {
+    color: rgba($white, 0.5);
+  }
+  
+  &:focus {
+    outline: none;
+    border-color: $lime;
+  }
+}
+
+.waitlist-form__button {
+  @include button-base;
+  background-color: $berry-red;
+  color: $white;
+  font-size: $text-lg;
+  padding: $space-4 $space-8;
+  
+  &:hover {
+    background-color: darken($berry-red, 10%);
+  }
+}
+
+.hero__hint {
+  font-size: $text-sm;
+  color: rgba($white, 0.6);
+  margin-bottom: $space-8;
+}
+
+.hero__lime-accent {
+  font-size: $text-sm;
+  color: rgba($white, 0.7);
+  
+  @include respond-to(md) {
+    font-size: $text-base;
+  }
+}

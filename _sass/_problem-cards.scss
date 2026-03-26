@@ -1,0 +1,38 @@
+// Problem Cards
+
+.problem-cards {
+  padding: $space-20 0;
+  background-color: $dark-teal;
+}
+
+.problem-cards__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-6;
+  
+  @include respond-to(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.problem-card {
+  @include card;
+  text-align: center;
+}
+
+.problem-card__icon {
+  font-size: $text-4xl;
+  margin-bottom: $space-4;
+}
+
+.problem-card__title {
+  font-size: $text-xl;
+  font-weight: $font-bold;
+  margin-bottom: $space-3;
+  color: $white;
+}
+
+.problem-card__text {
+  color: rgba($white, 0.7);
+  line-height: 1.6;
+}

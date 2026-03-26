@@ -1,0 +1,51 @@
+// Footer
+
+.site-footer {
+  padding: $space-16 0 $space-8;
+  background-color: $dark-teal;
+  border-top: 1px solid rgba($white, 0.1);
+  text-align: center;
+}
+
+.footer__brand {
+  margin-bottom: $space-6;
+}
+
+.footer__tagline {
+  font-size: $text-lg;
+  color: rgba($white, 0.7);
+  margin-top: $space-4;
+}
+
+.footer__nav {
+  display: flex;
+  justify-content: center;
+  gap: $space-8;
+  margin-bottom: $space-8;
+}
+
+.footer__link {
+  font-weight: $font-medium;
+  color: rgba($white, 0.7);
+  transition: color $transition-fast;
+  
+  &:hover {
+    color: $lime;
+  }
+}
+
+.footer__bottom {
+  padding-top: $space-8;
+  border-top: 1px solid rgba($white, 0.1);
+}
+
+.footer__copyright {
+  font-size: $text-sm;
+  color: rgba($white, 0.5);
+  margin-bottom: $space-2;
+}
+
+.footer__credit {
+  font-size: $text-sm;
+  color: rgba($white, 0.5);
+}
