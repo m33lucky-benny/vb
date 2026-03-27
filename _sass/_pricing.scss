@@ -1,106 +1,108 @@
-// Pricing
-
 .pricing {
-  padding: $space-20 0;
-  background-color: $dark-teal-light;
-}
+  padding: $space-24 0;
 
-.pricing__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: $space-6;
-  max-width: 1000px;
-  margin: 0 auto;
-  
-  @include respond-to(md) {
+  &__header {
+    text-align: center;
+    margin-bottom: $space-16;
+  }
+
+  &__title {
+    font-size: $text-4xl;
+    font-weight: $font-extrabold;
+    letter-spacing: -0.02em;
+    color: $text-light;
+
+    @media (max-width: 768px) {
+      font-size: $text-3xl;
+    }
+  }
+
+  &__grid {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: $space-6;
+    align-items: start;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      max-width: 400px;
+      margin: 0 auto;
+    }
   }
 }
 
 .pricing-card {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: $rounded-xl;
+  padding: $space-8;
   position: relative;
-  @include card;
-  text-align: center;
-  
+
   &--featured {
-    border: 2px solid $lime;
-    transform: scale(1.05);
-    
-    @include respond-to(md) {
-      transform: scale(1.1);
-    }
-  }
-}
-
-.pricing-card__badge {
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: $space-1 $space-4;
-  background-color: $lime;
-  color: $dark-teal;
-  font-weight: $font-bold;
-  font-size: $text-xs;
-  border-radius: $rounded-full;
-}
-
-.pricing-card__name {
-  font-size: $text-xl;
-  font-weight: $font-bold;
-  margin-bottom: $space-4;
-  color: $white;
-}
-
-.pricing-card__price {
-  margin-bottom: $space-6;
-}
-
-.pricing-card__amount {
-  font-size: $text-4xl;
-  font-weight: $font-extrabold;
-  color: $white;
-}
-
-.pricing-card__period {
-  font-size: $text-base;
-  color: rgba($white, 0.6);
-}
-
-.pricing-card__features {
-  list-style: none;
-  margin-bottom: $space-8;
-  
-  li {
-    padding: $space-2 0;
-    color: rgba($white, 0.8);
-    border-bottom: 1px solid rgba($white, 0.1);
-    
-    &:last-child {
-      border-bottom: none;
-    }
-  }
-}
-
-.pricing-card__button {
-  @include button-base;
-  width: 100%;
-  background-color: transparent;
-  border: 2px solid rgba($white, 0.3);
-  color: $white;
-  
-  &:hover {
-    background-color: rgba($white, 0.1);
-    border-color: $white;
-  }
-  
-  &--primary {
-    background-color: $berry-red;
     border-color: $berry-red;
-    
-    &:hover {
-      background-color: darken($berry-red, 10%);
-      border-color: darken($berry-red, 10%);
+    background-color: rgba($berry-red, 0.06);
+  }
+
+  &__badge {
+    display: inline-block;
+    background-color: $lime-accent;
+    color: $text-dark;
+    font-size: $text-xs;
+    font-weight: $font-bold;
+    letter-spacing: 0.05em;
+    padding: $space-1 $space-3;
+    border-radius: $rounded-full;
+    margin-bottom: $space-4;
+  }
+
+  &__name {
+    font-size: $text-lg;
+    font-weight: $font-bold;
+    color: $text-light;
+    margin-bottom: $space-2;
+  }
+
+  &__price {
+    font-size: $text-4xl;
+    font-weight: $font-extrabold;
+    color: $text-light;
+    margin-bottom: $space-1;
+
+    span {
+      font-size: $text-base;
+      font-weight: $font-normal;
+      color: rgba($text-light, 0.5);
     }
+  }
+
+  &__desc {
+    font-size: $text-sm;
+    color: rgba($text-light, 0.5);
+    margin-bottom: $space-6;
+  }
+
+  &__features {
+    list-style: none;
+    margin-bottom: $space-8;
+
+    li {
+      font-size: $text-sm;
+      color: rgba($text-light, 0.75);
+      padding: $space-2 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+      &::before {
+        content: "✓ ";
+        color: $berry-red;
+        font-weight: $font-bold;
+      }
+    }
+  }
+
+  &__cta {
+    @extend .btn-primary;
+    width: 100%;
+    text-align: center;
+    display: block;
   }
 }

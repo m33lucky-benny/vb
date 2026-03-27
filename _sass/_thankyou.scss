@@ -1,22 +1,13 @@
+.thankyou,
 .coming-soon {
-  @extend .thankyou;
-
-  &__content { @extend .thankyou__content; }
-  &__icon { @extend .thankyou__icon; }
-  &__title { @extend .thankyou__title; }
-  &__message { @extend .thankyou__message; }
-  &__back { @extend .thankyou__back; }
-}
-
-.thankyou {
-  background-color: $dark-teal;
+  background-color: $bg-dark;
   min-height: 60vh;
   display: flex;
   align-items: center;
   text-align: center;
   padding: $space-24 0;
 
-  &__content {
+  .container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,25 +21,29 @@
   &__title {
     font-size: $text-5xl;
     font-weight: $font-extrabold;
-    color: $white;
+    color: $text-light;
+
+    @media (max-width: 768px) {
+      font-size: $text-4xl;
+    }
   }
 
   &__message {
     font-size: $text-xl;
-    color: $off-white;
+    color: rgba($text-light, 0.7);
     max-width: 540px;
     line-height: 1.6;
   }
 
   &__sub {
     font-size: $text-base;
-    color: $gray;
+    color: $text-muted;
   }
 
   &__back {
     display: inline-block;
     margin-top: $space-4;
-    color: $lime;
+    color: $lime-accent;
     font-weight: $font-semibold;
     text-decoration: none;
     transition: opacity $transition-fast;

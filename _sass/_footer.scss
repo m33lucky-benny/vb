@@ -1,51 +1,59 @@
-// Footer
-
 .site-footer {
+  background-color: $bg-dark;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: $space-16 0 $space-8;
-  background-color: $dark-teal;
-  border-top: 1px solid rgba($white, 0.1);
-  text-align: center;
-}
 
-.footer__brand {
-  margin-bottom: $space-6;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-6;
+    text-align: center;
+  }
 }
 
 .footer__tagline {
-  font-size: $text-lg;
-  color: rgba($white, 0.7);
-  margin-top: $space-4;
+  font-size: $text-sm;
+  color: rgba($text-light, 0.45);
+  margin-top: $space-2;
 }
 
 .footer__nav {
   display: flex;
-  justify-content: center;
   gap: $space-8;
-  margin-bottom: $space-8;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .footer__link {
-  font-weight: $font-medium;
-  color: rgba($white, 0.7);
+  font-size: $text-sm;
+  color: rgba($text-light, 0.5);
   transition: color $transition-fast;
-  
+
   &:hover {
-    color: $lime;
+    color: $text-light;
   }
 }
 
 .footer__bottom {
-  padding-top: $space-8;
-  border-top: 1px solid rgba($white, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-2;
+  padding-top: $space-6;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  width: 100%;
 }
 
 .footer__copyright {
-  font-size: $text-sm;
-  color: rgba($white, 0.5);
-  margin-bottom: $space-2;
+  font-size: $text-xs;
+  color: rgba($text-light, 0.3);
 }
 
 .footer__credit {
-  font-size: $text-sm;
-  color: rgba($white, 0.5);
+  font-size: $text-xs;
+  color: rgba($text-light, 0.3);
+
+  .berry-red { color: $berry-red; }
+  .lime { color: $lime-accent; }
 }

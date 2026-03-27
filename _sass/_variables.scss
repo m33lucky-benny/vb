@@ -1,13 +1,20 @@
-// Variables
-
 // Colors
+$bg-dark: #0A0A0A;
+$bg-light: #FFFFFF;
+$text-dark: #1A1A1A;
+$text-light: #FAFAFA;
+$text-muted: #6B7280;
 $berry-red: #F26B6B;
-$dark-teal: #0A3A3A;
-$dark-teal-light: #0d4a4a;
-$lime: #D4F542;
+$berry-hover: #E85A5A;
+$lime-accent: #D4F542;
+
+// Legacy aliases
+$dark-teal: #0A0A0A;
+$dark-teal-light: #111111;
 $white: #FFFFFF;
-$off-white: #F5F5F5;
-$gray: #888888;
+$off-white: #FAFAFA;
+$gray: #6B7280;
+$lime: #D4F542;
 
 // Typography
 $font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;

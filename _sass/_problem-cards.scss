@@ -1,38 +1,57 @@
-// Problem Cards
+.problem {
+  padding: $space-24 0;
 
-.problem-cards {
-  padding: $space-20 0;
-  background-color: $dark-teal;
-}
+  &__header {
+    text-align: center;
+    margin-bottom: $space-16;
+  }
 
-.problem-cards__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: $space-6;
-  
-  @include respond-to(md) {
+  &__title {
+    font-size: $text-4xl;
+    font-weight: $font-extrabold;
+    letter-spacing: -0.02em;
+    color: $text-dark;
+    max-width: 600px;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      font-size: $text-3xl;
+    }
+  }
+
+  &__grid {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: $space-6;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
 .problem-card {
-  @include card;
-  text-align: center;
-}
+  background-color: $bg-light;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: $rounded-xl;
+  padding: $space-8;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 
-.problem-card__icon {
-  font-size: $text-4xl;
-  margin-bottom: $space-4;
-}
+  &__icon {
+    font-size: 2rem;
+    margin-bottom: $space-4;
+  }
 
-.problem-card__title {
-  font-size: $text-xl;
-  font-weight: $font-bold;
-  margin-bottom: $space-3;
-  color: $white;
-}
+  &__title {
+    font-size: $text-lg;
+    font-weight: $font-bold;
+    color: $text-dark;
+    margin-bottom: $space-2;
+  }
 
-.problem-card__text {
-  color: rgba($white, 0.7);
-  line-height: 1.6;
+  &__desc {
+    font-size: $text-sm;
+    color: $text-muted;
+    line-height: 1.6;
+  }
 }

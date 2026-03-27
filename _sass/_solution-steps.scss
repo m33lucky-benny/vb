@@ -1,48 +1,64 @@
-// Solution Steps
+.solution {
+  padding: $space-24 0;
 
-.solution-steps {
-  padding: $space-20 0;
-  background-color: $dark-teal-light;
-}
+  &__header {
+    text-align: center;
+    margin-bottom: $space-16;
+  }
 
-.solution-steps__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: $space-8;
-  
-  @include respond-to(md) {
+  &__title {
+    font-size: $text-4xl;
+    font-weight: $font-extrabold;
+    letter-spacing: -0.02em;
+    color: $text-light;
+    max-width: 600px;
+    margin: 0 auto $space-4;
+
+    @media (max-width: 768px) {
+      font-size: $text-3xl;
+    }
+  }
+
+  &__steps {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: $space-6;
+    margin-bottom: $space-16;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
   }
-  
-  @include respond-to(lg) {
-    grid-template-columns: repeat(4, 1fr);
+
+  &__cta {
+    text-align: center;
   }
 }
 
-.solution-step {
-  position: relative;
-  padding: $space-6;
-  background: rgba($white, 0.05);
+.step {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: $rounded-xl;
-  border: 1px solid rgba($white, 0.1);
-}
+  padding: $space-8;
 
-.solution-step__number {
-  display: inline-block;
-  font-size: $text-3xl;
-  font-weight: $font-extrabold;
-  color: $berry-red;
-  margin-bottom: $space-4;
-}
+  &__number {
+    font-size: $text-xs;
+    font-weight: $font-extrabold;
+    letter-spacing: 0.1em;
+    color: $berry-red;
+    margin-bottom: $space-3;
+  }
 
-.solution-step__title {
-  font-size: $text-xl;
-  font-weight: $font-bold;
-  margin-bottom: $space-3;
-  color: $white;
-}
+  &__title {
+    font-size: $text-lg;
+    font-weight: $font-bold;
+    color: $text-light;
+    margin-bottom: $space-2;
+  }
 
-.solution-step__text {
-  color: rgba($white, 0.7);
-  line-height: 1.6;
+  &__desc {
+    font-size: $text-sm;
+    color: rgba($text-light, 0.55);
+    line-height: 1.6;
+  }
 }

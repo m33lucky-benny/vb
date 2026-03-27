@@ -1,31 +1,18 @@
-// Responsive
+@media (max-width: 768px) {
+  .hero {
+    padding: $space-16 0;
+  }
 
-@include respond-to(sm) {
-  .container {
-    padding-left: $space-6;
-    padding-right: $space-6;
+  .problem,
+  .solution,
+  .edge,
+  .pricing {
+    padding: $space-16 0;
   }
 }
 
-@include respond-to(md) {
-  .container {
-    padding-left: $space-8;
-    padding-right: $space-8;
-  }
-}
-
-// Mobile-specific adjustments
-@media (max-width: 767px) {
-  .pricing-card--featured {
-    transform: none;
-    order: -1;
-  }
-  
-  .edge-feature__grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .solution-steps__grid {
-    grid-template-columns: 1fr;
+@media (max-width: 480px) {
+  body {
+    font-size: $text-sm;
   }
 }
