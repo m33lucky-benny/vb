@@ -1,3 +1,13 @@
+.coming-soon {
+  @extend .thankyou;
+
+  &__content { @extend .thankyou__content; }
+  &__icon { @extend .thankyou__icon; }
+  &__title { @extend .thankyou__title; }
+  &__message { @extend .thankyou__message; }
+  &__back { @extend .thankyou__back; }
+}
+
 .thankyou {
   background-color: $dark-teal;
   min-height: 60vh;
