@@ -1,0 +1,50 @@
+.thankyou {
+  background-color: $dark-teal;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: $space-24 0;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-6;
+  }
+
+  &__icon {
+    font-size: 4rem;
+  }
+
+  &__title {
+    font-size: $text-5xl;
+    font-weight: $font-extrabold;
+    color: $white;
+  }
+
+  &__message {
+    font-size: $text-xl;
+    color: $off-white;
+    max-width: 540px;
+    line-height: 1.6;
+  }
+
+  &__sub {
+    font-size: $text-base;
+    color: $gray;
+  }
+
+  &__back {
+    display: inline-block;
+    margin-top: $space-4;
+    color: $lime;
+    font-weight: $font-semibold;
+    text-decoration: none;
+    transition: opacity $transition-fast;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
